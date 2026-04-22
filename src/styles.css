@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111827;
+}
+
+.gold-gradient {
+  background: linear-gradient(120deg, #f4e7c6 0%, #f2d48f 45%, #d9b25a 100%);
+}
+
+.glass-card {
+  @apply backdrop-blur-sm bg-white/90 border border-stone-200;
+}
+
+input[type='range'] {
+  accent-color: #c79a32;
+}
