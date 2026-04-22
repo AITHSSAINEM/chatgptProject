@@ -2,16 +2,17 @@ import { categories } from '../data/products';
 
 export default function Filters({ filters, setFilters }) {
   return (
-    <aside className="glass-card h-fit rounded-2xl p-4 shadow-sm">
-      <h3 className="text-sm font-semibold uppercase tracking-wider text-stone-600">Filtres</h3>
+    <aside className="glass-card h-fit rounded-2xl p-5">
+      <p className="text-xs uppercase tracking-[0.3em] text-stone-500">Navigation</p>
+      <h3 className="mt-2 font-serif text-xl text-white">Filtres collection</h3>
 
-      <div className="mt-4 space-y-4 text-sm">
+      <div className="mt-6 space-y-5 text-sm">
         <div>
-          <label className="mb-1 block text-stone-700">Catégorie</label>
+          <label className="mb-2 block uppercase tracking-[0.2em] text-stone-400">Catégorie</label>
           <select
             value={filters.category}
             onChange={(event) => setFilters((prev) => ({ ...prev, category: event.target.value }))}
-            className="w-full rounded-lg border border-stone-300 px-3 py-2"
+            className="w-full rounded-lg border border-stone-700 bg-stone-900 px-3 py-2 text-stone-200"
           >
             <option value="all">Toutes</option>
             {categories.map((category) => (
@@ -23,7 +24,9 @@ export default function Filters({ filters, setFilters }) {
         </div>
 
         <div>
-          <label className="mb-1 block text-stone-700">Prix max: {filters.maxPrice}€</label>
+          <label className="mb-2 block uppercase tracking-[0.2em] text-stone-400">
+            Prix maximum: {filters.maxPrice}€
+          </label>
           <input
             type="range"
             min="30"
@@ -36,7 +39,7 @@ export default function Filters({ filters, setFilters }) {
           />
         </div>
 
-        <label className="flex items-center justify-between rounded-lg border border-stone-300 px-3 py-2">
+        <label className="flex items-center justify-between rounded-lg border border-stone-700 bg-stone-900 px-3 py-2 text-stone-200">
           <span>Nouveautés uniquement</span>
           <input
             type="checkbox"

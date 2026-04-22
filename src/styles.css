@@ -2,17 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #111827;
+:root {
+  color-scheme: dark;
 }
 
-.gold-gradient {
-  background: linear-gradient(120deg, #f4e7c6 0%, #f2d48f 45%, #d9b25a 100%);
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e7e5e4;
+  background: radial-gradient(circle at top, #1c1917 0%, #0c0a09 45%, #020617 100%);
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+.hero-luxury {
+  background: linear-gradient(105deg, rgba(10, 10, 10, 0.95) 0%, rgba(23, 23, 23, 0.82) 40%, rgba(68, 53, 21, 0.85) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .glass-card {
-  @apply backdrop-blur-sm bg-white/90 border border-stone-200;
+  @apply border border-stone-800 bg-black/50 backdrop-blur-sm;
 }
 
 input[type='range'] {

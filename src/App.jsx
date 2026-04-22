@@ -101,11 +101,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-transparent">
       <Header cartCount={totalItems} search={search} setSearch={setSearch} />
       <Hero />
 
-      <main className="mx-auto mt-8 grid max-w-7xl gap-5 px-4 md:grid-cols-[240px_1fr_320px] md:px-6">
+      <main className="mx-auto mt-8 grid max-w-7xl gap-5 px-4 md:grid-cols-[250px_1fr_320px] md:px-6">
         <Filters filters={filters} setFilters={setFilters} />
 
         <ProductGrid
